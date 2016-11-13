@@ -89,7 +89,7 @@ define KernelPackage/wireguard
   CATEGORY:=Kernel modules
   SUBMENU:=Network Support
   TITLE:=Wireguard kernel module
-  DEPENDS:=@IPV6 +kmod-udptunnel4 +kmod-udptunnel6 +kmod-ipt-hashlimit
+  DEPENDS:=@IPV6 +@KERNEL_PADATA +kmod-udptunnel4 +kmod-udptunnel6 +kmod-ipt-hashlimit
   FILES:= $(PKG_BUILD_DIR)/src/wireguard.$(LINUX_KMOD_SUFFIX)
   AUTOLOAD:=$(call AutoLoad,33,wireguard)
 endef
